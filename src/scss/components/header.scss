@@ -1,0 +1,44 @@
+.header {
+    background-color: black;
+    &__container {
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+        gap: 100px;
+    }
+    &__left {
+        display: flex;
+    }
+    &__logo {
+        flex: 0 0 100px;
+    }
+    &__menu {
+        flex-grow: 1;
+    }
+    &__list {
+        display: flex;
+        list-style: none;
+        padding: 0;
+        gap: 50px;
+        margin: 0;
+    }
+    &__elem {}
+    &__link {
+        color: $white;
+        text-decoration: none;
+        @include underline;
+    }
+    &__right {}
+    &__icons {
+        display: flex;
+        gap: 15px;
+    }
+    &__icon {
+        flex: 0 0 20px;
+        height: 20px;
+        transition: .2s;
+        &:hover {
+            opacity: 0.7;
+        }
+    }
+}

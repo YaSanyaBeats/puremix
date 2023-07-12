@@ -1,0 +1,40 @@
+// !media
+@mixin media($width) {
+  @media (max-width: #{$width + '.98' + px}) {
+    @content;
+  }
+}
+
+// !:not (last-child)
+@mixin notLast() {
+  &:not(:last-child) {
+    @content;
+  }
+}
+
+// !:not (first-child)
+@mixin notFirst() {
+  &:not(:first-child) {
+    @content;
+  }
+}
+
+@mixin underline() {
+    position: relative;
+    &::before {
+        content: '';
+        position: absolute;
+        left: 50%;
+        bottom: 0;
+        width: 0;
+        height: 1px;
+        background-color: $white;
+        transition: .3s;
+    }
+    &:hover {
+        &::before {
+            left: 0;
+            width: 100%;
+        }
+    }
+}
