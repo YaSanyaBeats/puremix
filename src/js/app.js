@@ -1,64 +1,44 @@
-/**
- * !(i)
- * Код попадает в итоговый файл, только когда вызвана функция, например FLSFunctions.spollers();
- * Или когда импортирован весь файл, например import "files/script.js";
- * Неиспользуемый (не вызванный) код в итоговый файл не попадает.
+const isMobile = document.documentElement.clientWidth < 768;
+const isTablet = document.documentElement.clientWidth < 1140;
 
- * Если мы хотим добавить модуль следует его раскомментировать
- */
-import {
-  isWebp,
-  headerFixed,
-  togglePopupWindows,
-  addTouchClass,
-  addLoadedClass,
-} from './modules';
+function isWebp() {
+    // Проверка поддержки webp
+    const testWebp = (callback) => {
+        const webP = new Image();
 
-// import BurgerMenu from './modules/BurgerMenu';
+        webP.onload = webP.onerror = () => callback(webP.height === 2);
+        webP.src =
+        'data:image/webp;base64,UklGRjoAAABXRUJQVlA4IC4AAACyAgCdASoCAAIALmk0mk0iIiIiIgBoSygABc6WWgAA/veff/0PP8bA//LwYAAA';
+    };
 
-// import Tabs from 'modules/Tabs';
+    // Добавление класса _webp или _no-webp для HTML
+    testWebp((support) => {
+        const className = support ? 'webp' : 'no-webp';
+        document.querySelector('html').classList.add(className);
 
-// import { MousePRLX } from './libs/parallaxMouse'
+        console.log(support ? 'webp поддерживается' : 'webp не поддерживается');
+    });
+}
 
-// import AOS from 'aos'
+function initEquipmentAccordion() {
+    const equipmentCards = document.querySelectorAll('.equipment__card');
+    if(equipmentCards.length > 0) {
+        equipmentCards.forEach((card) => {
+            const button = card.querySelector('.equipment-card__button');
+            button.addEventListener('click', (event) => {
+                card.classList.toggle('equipment-card_active');
+                button.classList.toggle('accordion-button_active')
+            })
+        })
+    }
+}
 
-// import Swiper, { Navigation, Pagination } from 'swiper';
+function initStickyHeader() {
+    //----
+}
 
-/* Проверка поддержки webp, добавление класса webp или no-webp для HTML
- ! (i) необходимо для корректного отображения webp из css
- */
 isWebp();
 
-/* Добавление класса touch для HTML если браузер мобильный */
-// addTouchClass();
-
-/* Добавление loaded для HTML после полной загрузки страницы */
-// addLoadedClass();
-
-/* Модуль для работы с меню (Бургер) */
-// new BurgerMenu().init();
-
-/**
- *  Библиотека для анимаций
- *  документация: https://michalsnik.github.io/aos
- */
-// AOS.init();
-
-/** Параллакс мышей */
-// const mousePrlx = new MousePRLX({});
-
-/** Фиксированный header */
-// headerFixed();
-
-/**
- *  Открытие/закрытие модальных окон
- * Чтобы модальное окно открывалось и закрывалось
- * На окно повешай атрибут data-popup="<название окна>"
- * И на кнопку, которая вызывает окно так же повешай атрибут data-type="<название окна>"
-
- * На обертку(враппер) окна добавь класс _overlay-bg
- * На кнопку для закрытия окна добавь класс button-close
- */
-// togglePopupWindows();
-
-// const tabs = new Tabs('default-tabs', {});
+document.addEventListener('DOMContentLoaded', (event) => {
+    initStickyHeader();
+})
