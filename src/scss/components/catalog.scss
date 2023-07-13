@@ -1,0 +1,105 @@
+.catalog {
+    &__container {
+        display: flex;
+        height: 100%;
+        -webkit-box-pack: center;
+        justify-content: center;
+        -webkit-box-orient: vertical;
+        -webkit-box-direction: normal;
+        flex-direction: column;
+    }
+    &__cards {
+        display: grid;
+        grid-template-columns: 1fr 1fr 1fr 1fr;
+        gap: 30px;
+    }
+    &__card {
+    }
+}
+.container {
+    margin: auto;
+}
+.catalog-title {
+    margin-top: 85px;
+    margin-right: 5px;
+    display: flex;
+    font-family: 'Asap', sans-serif;
+    font-size: 40px;
+    font-weight: 400;
+    line-height: 0.9;
+    text-align: left;
+    text-transform: uppercase;
+    &_accent {
+        margin-top: 40px;
+        margin-bottom: 50px;
+    }
+}
+.catalog-card {
+    position: relative;
+    &__img {
+        object-fit: cover;
+        width: 340px;
+        height: 450px;
+    }
+    &__tag {
+        z-index: 9;
+        top: 25px;
+        left: 25px;
+        width: 45px;
+        height: 45px;
+        padding-top: 15px;
+        padding-bottom: 15px;
+        position: absolute;
+        text-transform: uppercase;
+        background: $black;
+        color: $white;   
+        font-size: 15px;
+        font-weight: 300;
+        text-align: center;
+    }
+    &__title {
+        color: $black;
+        font-size: 25px;
+        font-weight: 300;
+        margin-top: 20px;
+        margin-bottom: 10px;
+    }
+    &__price {
+        display: flex;
+        color: $gray;
+        font-size: 20px;
+        font-weight: 300;
+        margin-bottom: 24px;
+    }
+    &__buttons {
+        margin-bottom: 50px;
+        display: flex;
+        gap: 16px;
+    }
+    &__link {
+        padding-top: 10px;
+        padding-bottom: 10px;
+        width: 162px;
+        height: 49px;
+        border: 1px solid;
+        font-size: 20px;
+        font-weight: 300;
+        line-height: 0,7;
+        text-align: center;
+        text-decoration: none;
+        color: $black;
+        &_fill {
+            padding-top: 10px;
+            padding-bottom: 10px;
+            width: 162px;
+            height: 49px;
+            background: $black;
+            font-size: 20px;
+            font-weight: 300;
+            line-height: 0,7;
+            text-align: center;
+            text-decoration: none;
+            color: $white;
+        }
+    }
+}
