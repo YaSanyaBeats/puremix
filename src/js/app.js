@@ -1,6 +1,5 @@
 const isMobile = document.documentElement.clientWidth < 768;
 const isTablet = document.documentElement.clientWidth < 1140;
-
 function isWebp() {
     // Проверка поддержки webp
     const testWebp = (callback) => {
@@ -21,12 +20,12 @@ function isWebp() {
 }
 
 function initEquipmentAccordion() {
-    const equipmentCards = document.querySelectorAll('.equipment__card');
+    const equipmentCards = document.querySelectorAll('.accordion__elem');
     if(equipmentCards.length > 0) {
         equipmentCards.forEach((card) => {
-            const button = card.querySelector('.equipment-card__button');
+            const button = card.querySelector('.accordion-button');
             button.addEventListener('click', (event) => {
-                card.classList.toggle('equipment-card_active');
+                card.classList.toggle('accordion__elem_active');
                 button.classList.toggle('accordion-button_active')
             })
         })
@@ -34,11 +33,24 @@ function initEquipmentAccordion() {
 }
 
 function initStickyHeader() {
-    //----
+    const header = document.querySelector('.header');
+    document.addEventListener("scroll", (event) => {
+        if (window.scrollY > 300)
+        {
+            header.classList.add('header_fill');
+        }
+        else
+        {
+            header.classList.remove('header_fill');
+        }
+      });
 }
+
+
 
 isWebp();
 
 document.addEventListener('DOMContentLoaded', (event) => {
     initStickyHeader();
+    initEquipmentAccordion();
 })
