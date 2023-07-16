@@ -4,7 +4,11 @@
         'title': 'Главная'
     })
     <body>
-    @@include('html/header.html', {})
+    @@include('html/header.html', {
+        'link-color':'header__link_white',
+        'logo-hidden': '', 
+        'logo-gold-hidden': 'header__logo_hidden',
+        'icon-color': ''})
 
     <main class="main">
         @@include('html/hero.html', {})

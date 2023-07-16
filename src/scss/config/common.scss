@@ -80,6 +80,7 @@ a {
 .variations-calc {
     height: 50px;
     display: flex;
+    background: #F1F1F1;
 }
 
 .minus {
@@ -89,8 +90,9 @@ a {
     width: 50px;
     height: 50px;
     text-align: center;
-    background: #F1F1F1;
     padding: 10px 0;
+    cursor: pointer;
+    background: transparent;
 }
 .quantity {
     color: $black;
@@ -102,8 +104,9 @@ a {
     border-width: 0 2px;
     border-style: solid;
     border-color: #00000038;
-    background: #F1F1F1;
     padding: 10px 0;
+    cursor: pointer;
+    background: transparent;
 }
 .plus {
     color: rgba(0, 0, 0, 0.50);
@@ -112,6 +115,7 @@ a {
     width: 50px;
     height: 50px;
     text-align: center;
-    background: #F1F1F1;
     padding: 10px 0;
+    cursor: pointer;
+    background: transparent;
 }

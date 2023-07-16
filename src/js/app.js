@@ -34,17 +34,50 @@ function initEquipmentAccordion() {
 
 function initStickyHeader() {
     const header = document.querySelector('.header');
+    const headerLinks = document.querySelectorAll('.header__link');
+    const headerIcons = document.querySelectorAll('.header__icon');
     document.addEventListener("scroll", (event) => {
-        if (window.scrollY > 300)
+        if (window.scrollY > 10)
         {
             header.classList.add('header_fill');
+            headerLinks.forEach((link) => {
+                link.classList.add('header__link_black');
+              });
+            headerIcons.forEach((icon) => {
+                icon.classList.add('header__icon_fill');
+            });  
         }
         else
         {
             header.classList.remove('header_fill');
+            headerLinks.forEach((link) => {
+                link.classList.remove('header__link_black');
+              });
+            headerIcons.forEach((icon) => {
+                icon.classList.remove('header__icon_fill');
+            });  
         }
       });
 }
+
+function initVariationsCalc() {
+    var plus = document.querySelector('.plus');
+    var minus = document.querySelector('.minus');
+    var field = document.querySelector('.quantity');
+    var fieldValue = parseInt(field.innerText);
+    minus.addEventListener('click', function() {
+      if (fieldValue > 1) {
+        fieldValue--;
+        field.innerText = fieldValue;
+      } else {
+        return 1;
+      }
+    });
+    plus.addEventListener('click', function() {
+      fieldValue++;
+      field.innerText = fieldValue;
+    });
+  }
 
 
 
@@ -53,4 +86,5 @@ isWebp();
 document.addEventListener('DOMContentLoaded', (event) => {
     initStickyHeader();
     initEquipmentAccordion();
+    initVariationsCalc();
 })

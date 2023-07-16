@@ -17,7 +17,10 @@
         display: flex;
     }
     &__logo {
-        flex: 0 0 100px;
+        flex: 0 0 150px;
+        &_hidden{
+            display: none;
+        }
     }
     &__menu {
         flex-grow: 1;
@@ -31,10 +34,16 @@
     }
     &__elem {}
     &__link {
-        color: $white;
+        color: $black;
         text-decoration: none;
         font-size: 20px;
         @include underline;
+        &_white{
+            color: $white; 
+        }
+        &_black{
+            color: $white; 
+        }
     }
     &__right {}
     &__icons {
@@ -43,14 +52,21 @@
     }
     &__icon {
         flex: 0 0 20px;
-        height: 20px;
+        height: 40px;
         transition: .2s;
         &:hover {
             opacity: 0.7;
+        }
+        &_black{
+            filter: brightness(0%);
+        }
+        &_fill{
+            filter: brightness(100%);
         }
     }
 }
 .header_fill
 {
     background-color: $black;
+    color: $white
 }

@@ -1,35 +1,38 @@
 <header class="header">
     <div class="header__container container">
-        <a href="/" class="header__logo">
+        <a href="/" class="header__logo @@logo-hidden">
             @@include('../images/vector/logo.svg')
+        </a>
+        <a href="/" class="header__logo @@logo-gold-hidden">
+            @@include('../images/vector/logo-gold.svg')
         </a>
         <nav class="header__menu">
             <ul class="header__list">
                 <li class="header__elem">
-                    <a href="#" class="header__link">Каталог</a>
+                    <a href="#" class="header__link @@link-color">Каталог</a>
                 </li>
                 <li class="header__elem">
-                    <a href="#" class="header__link">О нас</a>
+                    <a href="#" class="header__link @@link-color">О нас</a>
                 </li>
                 <li class="header__elem">
-                    <a href="#" class="header__link">Контакты</a>
+                    <a href="#" class="header__link @@link-color">Контакты</a>
                 </li>
                 <li class="header__elem">
-                    <a href="#" class="header__link">Доставка и оплата</a>
+                    <a href="#" class="header__link @@link-color">Доставка и оплата</a>
                 </li>
                 <li class="header__elem">
-                    <a href="#" class="header__link">Для партнёров</a>
+                    <a href="#" class="header__link @@link-color">Для партнёров</a>
                 </li>
             </ul>
         </nav>
         <div class="header__icons">
-            <a href="#" class="header__icon">
+            <a href="#" class="header__icon @@icon-color">
                 @@include('../images/vector/search.svg')
             </a>
-            <a href="#" class="header__icon">
+            <a href="#" class="header__icon @@icon-color">
                 @@include('../images/vector/account.svg')
             </a>
-            <a href="#" class="header__icon">
+            <a href="#" class="header__icon @@icon-color">
                 @@include('../images/vector/cart.svg')
             </a>
         </div>
