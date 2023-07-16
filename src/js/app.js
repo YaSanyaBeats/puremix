@@ -34,12 +34,14 @@ function initEquipmentAccordion() {
 
 function initStickyHeader() {
     const header = document.querySelector('.header');
+    const headerLogo = document.querySelector('.header__logo');
     const headerLinks = document.querySelectorAll('.header__link');
     const headerIcons = document.querySelectorAll('.header__icon');
     document.addEventListener("scroll", (event) => {
         if (window.scrollY > 10)
         {
             header.classList.add('header_fill');
+            headerLogo.classList.add('header__logo_fill-white');
             headerLinks.forEach((link) => {
                 link.classList.add('header__link_black');
               });
@@ -50,6 +52,7 @@ function initStickyHeader() {
         else
         {
             header.classList.remove('header_fill');
+            headerLogo.classList.remove('header__logo_fill-white');
             headerLinks.forEach((link) => {
                 link.classList.remove('header__link_black');
               });

@@ -18,8 +18,11 @@
     }
     &__logo {
         flex: 0 0 150px;
-        &_hidden{
-            display: none;
+        &_white{
+            filter: brightness(1000%);
+        }
+        &_fill-white{
+            filter: brightness(1000%);
         }
     }
     &__menu {
