@@ -19,7 +19,7 @@
   }
 }
 
-@mixin underline() {
+@mixin underline($color) {
     position: relative;
     &::before {
         content: '';
@@ -28,7 +28,7 @@
         bottom: 0;
         width: 0;
         height: 1px;
-        background-color: $white;
+        background-color: $color;
         transition: .3s;
     }
     &:hover {

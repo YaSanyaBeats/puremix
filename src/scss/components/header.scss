@@ -21,7 +21,8 @@
         &_white{
             filter: brightness(1000%);
         }
-        &_fill-white{
+        &_fill-white
+        {
             filter: brightness(1000%);
         }
     }
@@ -35,17 +36,18 @@
         gap: 50px;
         margin: 0;
     }
-    &__elem {}
     &__link {
         color: $black;
         text-decoration: none;
         font-size: 20px;
-        @include underline;
+        @include underline($black);
         &_white{
-            color: $white; 
+            color: $white;
+            @include underline($white);
         }
         &_black{
-            color: $white; 
+            color: $white;
+            @include underline($white);
         }
     }
     &__right {}
