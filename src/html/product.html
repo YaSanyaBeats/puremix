@@ -3,37 +3,35 @@
         <div class="product__slider">
             <div class="product-slider__img-wrapper">
                 <img class="product-slider__img" src="images/product.png">
-                <div class="product-slider__buttons">
-                    <div class="product-slider__button_left">
-                        @@include('../images/vector/left.svg')
-                    </div>
-                    <div class="product-slider__button_right">
-                        @@include('../images/vector/right.svg')
-                    </div>
+                <div class="product-slider__button_left">
+                    @@include('../images/vector/left.svg')
                 </div>
-            </div>
-            <div class="product__pagination">
-                <span class="product-pagination__element product-pagination__element-active">
-                </span>
-                <span class="product-pagination__element">
-                </span>
-                <span class="product-pagination__element">
-                </span>
+                <div class="product-slider__button_right">
+                    @@include('../images/vector/right.svg')
+                </div>
+                <div class="product__pagination">
+                    <span class="product-pagination__element product-pagination__element-active">
+                    </span>
+                    <span class="product-pagination__element">
+                    </span>
+                    <span class="product-pagination__element">
+                    </span>
+                </div>
             </div>
         </div>
         <div class="product__content">
-            <h2 class="product__title">МАСКА «3 В 1» ДЛЯ КОЖИ ЛИЦА, ШЕИ И ОБЛАСТИ ДЕКОЛЬТЕ</h2>
+            <h2 class="product__title">МАСКА «3 В 1» ДЛЯ КОЖИ ЛИЦА,<br> ШЕИ И ОБЛАСТИ ДЕКОЛЬТЕ</h2>
             <div class="product__info">
                 <div class="product-info__block">
-                    @@include('../images/vector/natural.svg')
+                    <div class="product-info__icon">@@include('../images/vector/natural.svg')</div>
                     <span class="product-info__text">94% натуральных ингредиентов</span>
                 </div>
                 <div class="product-info__block">
-                    @@include('../images/vector/import.svg')
+                    <div class="product-info__icon">@@include('../images/vector/import.svg')</div>
                     <span class="product-info__text">100% импортные ингредиенты</span>
                 </div>
                 <div class="product-info__block">
-                    @@include('../images/vector/animal.svg')
+                    <div class="product-info__icon">@@include('../images/vector/animal.svg')</div>
                     <span class="product-info__text">Не тестировался на животных</span>
                 </div>                
             </div>
@@ -43,14 +41,14 @@
                     <span data-max="0" class="quantity">1</span>
                     <span class="plus">+</span>
                 </div>
-                <span class="product__variations-info">100 мл</span>
+                <span class="product-variations__info">100 мл</span>
             </div>
             <div class="product__price">
                 <span class="product__price-final">1 199Р</span>
                 <span class="product__price-old">1 499Р</span>
             </div>
             <a href="#" class="product__link button">В КОРЗИНУ 
-                <div class="product-link__icon">@@include('../images/vector/cart.svg')</div>
+                <div class="product-link__icon">@@include('../images/vector/product-cart.svg')</div>
             </a>
             <span class="product__expiration">* Срок годности: Октябрь 2024 г.</span>
         </div>
