@@ -83,7 +83,7 @@ function initVariationsCalc() {
   }
 
   function initTabs() {
-    const tabLinks = document.querySelectorAll(".tabs__button_link");
+    const tabLinks = document.querySelectorAll(".tabs-button__link");
     const tabPanels = document.querySelectorAll(".tabs__panel");
     for(let link of tabLinks) {
       link.addEventListener("click", e => {
