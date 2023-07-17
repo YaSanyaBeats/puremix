@@ -1,0 +1,43 @@
+.about-article {
+    margin-top: 100px;
+    &__container {
+        display: flex;
+    }
+    &__image-block {
+        width: 590px;
+        height: 520px;
+    }
+    &__content-block {
+        margin-left: 50px;
+        display: flex;
+        flex-direction: column;
+    }
+}
+.about-article-image-block {
+    &__image {
+        object-fit: cover;
+        width: 100%;
+    }
+}
+.about-article-content-block {
+    &__title {
+        color: $black;
+        font-family: 'Asap', sans-serif;
+        font-size: 40px;
+        font-weight: 400;
+        text-transform: uppercase;
+        margin: 0;
+    }
+    &__text-first {
+        color: $black;
+        font-size: 30px;
+        font-weight: 300;
+        margin-top: 100px;
+    }
+    &__text-second {
+        color: $black;
+        font-size: 24px;
+        font-weight: 300;
+        margin-top: 50px;
+    }
+}
