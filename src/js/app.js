@@ -38,7 +38,7 @@ function initStickyHeader() {
     const headerLinks = document.querySelectorAll('.header__link');
     const headerIcons = document.querySelectorAll('.header__icon');
     document.addEventListener("scroll", (event) => {
-        if (window.scrollY > 10)
+        if (window.scrollY > 100)
         {
             header.classList.add('header_fill');
             headerLogo.classList.add('header__logo_fill-white');
@@ -82,7 +82,23 @@ function initVariationsCalc() {
     });
   }
 
-
+  function initTabs() {
+    const tabLinks = document.querySelectorAll(".tabs__button_link");
+    const tabPanels = document.querySelectorAll(".tabs__panel");
+    for(let link of tabLinks) {
+      link.addEventListener("click", e => {
+        e.preventDefault();
+        
+        document.querySelector('.tabs__button.tabs__active').classList.remove("tabs__active");
+        document.querySelector('.tabs__panel.tabs__active').classList.remove("tabs__active");
+        const parentListItem = link.parentElement;
+        parentListItem.classList.add("tabs__active");
+        const index = [...parentListItem.parentElement.children].indexOf(parentListItem);
+        const panel = [...tabPanels].filter(link => link.getAttribute("data-index") == index);
+        panel[0].classList.add("tabs__active");
+      });
+    }
+  }
 
 isWebp();
 
@@ -90,4 +106,5 @@ document.addEventListener('DOMContentLoaded', (event) => {
     initStickyHeader();
     initEquipmentAccordion();
     initVariationsCalc();
+    initTabs();
 })
