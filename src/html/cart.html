@@ -1,0 +1,77 @@
+<section class="cart">
+    <div class="cart__container container">
+        <span class="cart__title section-title">Корзина</span>
+        <a href="#" class="cart__link">Вернуться к каталогу</a>
+        <div class="cart__product-block">
+            <a href="#" class="cart-product-block__cancell">
+                @@include('../images/vector/cancell.svg')
+            </a>
+
+            <div class="cart-product-block__product">
+                <span class="cart-product-block__title">Товар</span>
+                <div class="cart-product-block__content">
+                    <a href="#" class="cart-product-block-content__img-wrapper">
+                        <img src="images/product.png" class="cart-product-block__image">
+                    </a>
+                    <span class="cart-product-block-content__title cart-product-block-content__text">Крем маска для ног</span>
+                </div>  
+            </div>
+
+            <div class="cart-product-block__price">
+                <span class="cart-product-block__title">Цена</span>
+                <div class="cart-product-block__content">
+                    <span class="cart-product-block-content__text">1 190Р</span>
+                </div>  
+            </div> 
+
+            <div class="cart-product-block__calc">
+                <span class="cart-product-block__title">Количество</span>
+                <div class="cart-product-block__content">
+                    @@include('calc.html', {})
+                </div>  
+            </div>   
+
+            <div class="cart-product-block__subtotal">
+                <span class="cart-product-block__title">Подытог</span>
+                <div class="cart-product-block__content">
+                    <span class="cart-product-block-content__text">1 190Р</span>
+                </div>  
+            </div>   
+
+        </div>
+
+        <div class="cart__product-block">
+            <a href="#" class="cart-product-block__cancell">
+                @@include('../images/vector/cancell.svg')
+            </a>
+            <div class="cart-product-block__product">
+                <span class="cart-product-block__title">Товар</span>
+                <div class="cart-product-block__content">
+                    <a href="#" class="cart-product-block-content__img-wrapper">
+                        <img src="images/product.png" class="cart-product-block__image">
+                    </a>
+                    <span class="cart-product-block-content__title cart-product-block-content__text">Крем маска для ног</span>
+                </div>  
+            </div>
+            <div class="cart-product-block__price">
+                <span class="cart-product-block__title">Цена</span>
+                <div class="cart-product-block__content">
+                    <span class="cart-product-block-content__text">1 190Р</span>
+                </div>  
+            </div> 
+            <div class="cart-product-block__calc">
+                <span class="cart-product-block__title">Количество</span>
+                <div class="cart-product-block__content">
+                    @@include('calc.html', {})
+                </div>  
+            </div>   
+            <div class="cart-product-block__subtotal">
+                <span class="cart-product-block__title">Подытог</span>
+                <div class="cart-product-block__content">
+                    <span class="cart-product-block-content__text">1 190Р</span>
+                </div>  
+            </div>   
+        </div>
+
+    </div>
+</section>
