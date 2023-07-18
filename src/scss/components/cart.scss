@@ -17,6 +17,10 @@
         font-weight: 300;
         text-decoration: none;
     }
+    &__result {
+        margin-top:70px;
+        margin-left: 800px;
+    }
 }
 .cart-product-block {
 
@@ -74,4 +78,51 @@
     }
 
 }
+
+
+.cart-result {
+
+    &__title {
+        color: $black;
+        font-family: 'Asap', sans-serif;
+        font-size: 30px;
+        font-weight: 400;
+    }
+
+    &__block {
+        margin-top:40px;
+        &_text {
+            color: $black;
+            font-size: 25px;
+            font-weight: 300;
+        }
+    }
+
+    &__link {
+        margin-top: 50px;
+        width: 245px;
+    }
+}
+.cart-result-block {
+
+    &__title {
+        color: rgba(0, 0, 0, 0.50);
+        font-size: 20px;
+        font-weight: 300;
+    }
+}
+.cart-result-delivery {
+
+    &__text {
+        margin-left: 50px
+    }
+}
+.cart-result-price {
+
+    &__text {
+        margin-left: 77px
+    }
+}
+
+
 
