@@ -1,6 +1,6 @@
 .feedback {
     margin-top: 100px;
-    background: rgba(181,181,181,1);
+    background: rgba(174,174,174,1);
     background-size: cover;
     height: 490px;
     text-transform: uppercase;
@@ -9,6 +9,7 @@
         height: 100%;
     }
     &__content {
+        z-index: 1;
         width: max-content;
     }
     &__title {
@@ -67,7 +68,7 @@
         border: none;
     }
     &__block {
-        &::before
+        /*&::before
         {
             z-index: 2;
             content: "";
@@ -75,7 +76,7 @@
             width: 150px;
             height: 490px;
             background: linear-gradient(90deg, rgba(181,181,181,1) 0%, rgba(174,174,174,1) 51%, rgba(174,174,174,1) 100%);
-        }
+        }*/
     }
     &__image {
         object-fit: cover;
