@@ -76,3 +76,43 @@
     background-color: $purple;
     color: $white
 }
+@include media($mobile) {
+    .header {
+        &__container {
+            flex-direction: column;
+        }
+        &__left {
+        }
+        &__logo {
+            &_white{
+            }
+            &_fill-white
+            {
+            }
+        }
+        &__menu {
+        }
+        &__list {
+        }
+        &__link {
+            &_white{
+            }
+            &_black{
+            }
+        }
+        &__right {}
+        &__icons {
+        }
+        &__icon {
+            &:hover {
+            }
+            &_black{
+            }
+            &_fill{
+            }
+        }
+    }
+    .header_fill
+    {
+    }
+}
