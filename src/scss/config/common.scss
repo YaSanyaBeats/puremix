@@ -140,3 +140,41 @@ a {
         right: 350px;
     }
 }
+
+.form-input {
+    margin-top:25px;
+    display: flex;
+    width: 707px;
+    height: 90px;
+    padding: 10px 30px;
+    align-items: center;
+    border: 1px solid $black;
+    color: $black;
+    font-size: 25px;
+    font-weight: 400;
+
+    &::placeholder {
+        color: $black;
+        font-size: 25px;
+        font-weight: 400;
+    }
+
+    &_ident {
+        margin:0;
+    }
+
+    &_gray {
+
+        margin-top: 25px;
+
+        &::placeholder {
+            color: #BBB;
+            font-size: 25px;
+            font-weight: 300;
+            &::first-letter
+            {
+                color: $black;
+            }
+        }
+    }
+}
