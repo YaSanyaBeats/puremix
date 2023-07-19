@@ -1,0 +1,46 @@
+.error {
+    margin-top: 160px;
+    &__container {
+        display: flex;
+    }
+    &__content {
+        display: flex;
+        flex-direction: column;
+        z-index: 3;
+    }
+    &__title {
+        margin:0;
+    }
+    &__text {
+        margin-top: 50px;
+        color: $black;
+        font-size: 25px;
+        font-weight: 300;
+    }
+    &__link {
+        margin-top: 100px;
+        width: 340px;
+        padding: 30px;
+        text-transform: uppercase;
+        font-size: 25px;
+    }
+    &__block {
+        display: flex;
+    }
+}
+.error-block {
+
+    &__image-1 {
+        width: 155px;
+        height: 235px;
+        top: 270px;
+        right: 470px;
+    }
+
+    &__image-2 {
+        width: 390px;
+        height: 260px;
+        top: 160px;
+        right: 550px;
+    }
+}
