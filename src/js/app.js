@@ -14,7 +14,6 @@ function isWebp() {
     testWebp((support) => {
         const className = support ? 'webp' : 'no-webp';
         document.querySelector('html').classList.add(className);
-
         console.log(support ? 'webp поддерживается' : 'webp не поддерживается');
     });
 }
@@ -44,7 +43,7 @@ function initStickyHeader() {
             headerLogo.classList.add('header__logo_fill-white');
             headerLinks.forEach((link) => {
                 link.classList.add('header__link_black');
-              });
+                });
             headerIcons.forEach((icon) => {
                 icon.classList.add('header__icon_fill');
             });  
@@ -55,50 +54,79 @@ function initStickyHeader() {
             headerLogo.classList.remove('header__logo_fill-white');
             headerLinks.forEach((link) => {
                 link.classList.remove('header__link_black');
-              });
+                });
             headerIcons.forEach((icon) => {
                 icon.classList.remove('header__icon_fill');
             });  
         }
-      });
+    });
+}
+
+class ProductCounter {
+    constructor(root) {
+        this.root = root;
+        this.plusNode = this.root.querySelector('.plus');
+        this.minusNode = this.root.querySelector('.minus');
+        this.quantityNode = this.root.querySelector('.quantity');
+        this._count = 1;
+
+        this.bindListeners();
+        console.log(1);
+    }
+
+    bindListeners() {
+        this.plusNode.addEventListener('click', (event) => {
+            this.count++;
+            this.update();
+        })
+        this.minusNode.addEventListener('click', (event) => {
+            this.count--;
+            this.update();
+        })
+    }
+
+    get count() {
+        return this._count;
+    }
+
+    set count(value) {
+        if(value >= 0) {
+            this._count = value;
+        }
+    }
+
+    update() {
+        this.quantityNode.innerText = this.count;
+    }
 }
 
 function initVariationsCalc() {
-    var plus = document.querySelector('.plus');
-    var minus = document.querySelector('.minus');
-    var field = document.querySelector('.quantity');
-    var fieldValue = parseInt(field.innerText);
-    minus.addEventListener('click', function() {
-      if (fieldValue > 1) {
-        fieldValue--;
-        field.innerText = fieldValue;
-      } else {
-        return 1;
-      }
-    });
-    plus.addEventListener('click', function() {
-      fieldValue++;
-      field.innerText = fieldValue;
-    });
-  }
+    let productCounterNodes = document.querySelectorAll('.variations-calc');
+    if(productCounterNodes.length > 0) {
+        productCounterNodes.forEach((counter) => {
+            console.log(counter);
+            new ProductCounter(counter);
+        })
+    }
+}
 
-  function initTabs() {
+function initTabs() {
     const tabLinks = document.querySelectorAll(".tabs-button__link");
     const tabPanels = document.querySelectorAll(".tabs__panel");
     for(let link of tabLinks) {
-      link.addEventListener("click", e => {
-        e.preventDefault();
-        
-        document.querySelector('.tabs__button.tabs__active').classList.remove("tabs__active");
-        document.querySelector('.tabs__panel.tabs__active').classList.remove("tabs__active");
-        const parentListItem = link.parentElement;
-        parentListItem.classList.add("tabs__active");
-        const index = [...parentListItem.parentElement.children].indexOf(parentListItem);
-        const panel = [...tabPanels].filter(link => link.getAttribute("data-index") == index);
-        panel[0].classList.add("tabs__active");
-      });
+        link.addEventListener("click", e => {
+            e.preventDefault();
+            
+            document.querySelector('.tabs__button.tabs__active').classList.remove("tabs__active");
+            document.querySelector('.tabs__panel.tabs__active').classList.remove("tabs__active");
+            const parentListItem = link.parentElement;
+            parentListItem.classList.add("tabs__active");
+            const index = [...parentListItem.parentElement.children].indexOf(parentListItem);
+            const panel = [...tabPanels].filter(link => link.getAttribute("data-index") == index);
+            panel[0].classList.add("tabs__active");
+        });
     }
-  }
+}
 
 isWebp();
 
