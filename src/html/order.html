@@ -1,39 +1,41 @@
 <section class="order">
     <div class="order__container container">
         <span class="order__title section-title">Оформление заказа</span>
-        <div class="order__content">
-            <span class="order-content__title order-block__title">Оформление заказа</span>
-            <div class="order-content__product">
-                <a href="#" class="order-content-product__img-wrapper">
-                    <img src="images/product.png" class="order-content-product__image">
-                </a>
-                <span class="order-content-product__title-product">Крем маска для ног</span>
-                <div class="order-content-product__price">
-                    <span class="order-content-product__price-result">1 190Р</span>
-                    <span class="order-content-product__price-multiply">1 x 1 190Р</span>
+        <div class="order__block">
+            <div class="order__content">
+                <span class="order-content__title order-block__title">Ваш заказ</span>
+                <div class="order-content__product">
+                    <a href="#" class="order-content-product__img-wrapper">
+                        <img src="images/product.png" class="order-content-product__image">
+                    </a>
+                    <span class="order-content-product__title-product">Крем маска для ног</span>
+                    <div class="order-content-product__price">
+                        <span class="order-content-product__price-result">1 190Р</span>
+                        <span class="order-content-product__price-multiply">1 x 1 190Р</span>
+                    </div>
                 </div>
             </div>
+            <form class="order__form">
+                <span class="order-form__title order-form__title_main">Оформление</span>
+                <input placeholder="Ваше имя" class="order-form__input form-input form-input_ident" type="text" name="s">
+                <input placeholder="+7 913 000 00 00" class="order-form__input form-input form-input_gray" type="text" name="s">
+                <input placeholder="E-mail" class="order-form__input form-input" type="text" name="s">
+                <span class="order-form__title">Доставка</span>
+                <ul class="order-form__list order-form__delivery">
+                    <li class="order-form-list__element">Lorem ipsum</li>
+                    <li class="order-form-list__element">Lorem ipsum</li>
+                    <li class="order-form-list__element">Lorem ipsum</li>
+                </ul>
+                <input placeholder="Город" class="order-form__input form-input" type="text" name="s">
+                <textarea placeholder="Примечания к заказу" class="order-form__input order-form__input_size form-input form-input_gray" type="text" name="s"></textarea>
+                <span class="order-form__title">Оплата</span>
+                <ul class="order-form__list order-form__payment">
+                    <li class="order-form-list__element">Lorem ipsum</li>
+                    <li class="order-form-list__element">Lorem ipsum</li>
+                    <li class="order-form-list__element">Lorem ipsum</li>
+                </ul>
+                <a href="#" class="order-form__link button">Отправить</a>
+            </form>
         </div>
-        <form class="order__form">
-            <span class="order-form__title order-form__title_main">Оформление заказа</span>
-            <input placeholder="Ваше имя" class="order-form__input form-input form-input_ident" type="text" name="s">
-            <input placeholder="+7 913 000 00 00" class="order-form__input form-input form-input_gray" type="text" name="s">
-            <input placeholder="E-mail" class="order-form__input form-input" type="text" name="s">
-            <span class="order-form__title">Доставка</span>
-            <ul class="order-form__delivery">
-                <li>Lorem ipsum</li>
-                <li>Lorem ipsum</li>
-                <li>Lorem ipsum</li>
-            </ul>
-            <input placeholder="Город" class="order-form__input form-input" type="text" name="s">
-            <input placeholder="Примечания к заказу" class="order-form__input order-form__input_size form-input form-input_gray" type="text" name="s">
-            <span class="order-form__title">Оплата</span>
-            <ul class="order-form__payment">
-                <li>Lorem ipsum</li>
-                <li>Lorem ipsum</li>
-                <li>Lorem ipsum</li>
-            </ul>
-            <a href="#" class="order-form__link button">Отправить</a>
-        </form>
     </div>
 </section>

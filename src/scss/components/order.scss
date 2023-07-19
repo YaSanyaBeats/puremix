@@ -1,0 +1,133 @@
+.order {
+    margin-top: 160px;
+    &__container {
+    }
+    &__block {
+        margin-top:50px;
+        display: flex;
+    }
+    &__title {
+        margin:0;
+    }
+
+    &__content {
+        display: flex;
+        flex-direction: column;
+    }
+
+    &__form {
+        margin-left: 220px;
+        color: $black;
+        display: flex;
+        flex-direction: column;
+    }
+}
+
+.order-content {
+
+    &__title {
+        color: $black;
+        font-size: 30px;
+        font-weight: 300;
+        text-transform: uppercase;
+    }
+
+    &__product {
+        width: max-content;
+        margin-top:50px;
+        display: flex;
+        color: $black;
+    }
+}
+.order-block {
+
+    &__title {
+    }
+}
+.order-content-product {
+
+    &__img-wrapper {
+        width: 181px;
+        height: 181px;
+        flex-shrink: 0;
+        overflow: hidden;
+        &:hover {
+            opacity: 1;
+            .order-content-product__image {
+                transform: scale(1.05) rotate(2deg);
+            }
+        }
+    }
+
+    &__image {
+        object-fit: cover;
+        width: 100%;
+        height: 100%;
+        transition: .3s;
+    }
+
+    &__title-product {
+        margin-left: 25px;
+        font-size: 25px;
+        font-weight: 300;
+    }
+
+    &__price {
+        display: flex;
+        flex-direction: column;
+        margin-left: 50px;
+        text-align: right;
+    }
+
+    &__price-result {
+        opacity: 0.5;
+        font-size: 20px;
+        font-weight: 300;
+        text-transform: lowercase;
+    }
+
+    &__price-multiply {
+        margin-top: 15px;
+        font-size: 25px;
+        font-weight: 300;
+        text-transform: lowercase;
+    }
+}
+.order-form {
+
+    &__title {
+        margin-top: 50px;
+        font-size: 35px;
+        font-weight: 300;
+
+        &_main {
+            margin:0;
+        }
+    }
+    &__input {
+        margin-top: 30px;
+        &_size {
+            display: flex;
+            height: 185px;
+            padding: 22px 30px;
+        }
+    }
+    &__list {
+    font-size: 25px;
+    font-weight: 300;
+    margin:0;
+    }
+    &__link {
+        margin-top: 85px;
+        display: flex;
+        width: 310px;
+        height: 90px;
+        justify-content: center;
+        align-items: center;
+    }
+}
+.order-form-list{
+    &__element {
+        margin-top:30px;
+    }
+}

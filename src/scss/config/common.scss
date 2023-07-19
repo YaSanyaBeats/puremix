@@ -156,11 +156,14 @@ a {
     &::placeholder {
         color: $black;
         font-size: 25px;
-        font-weight: 400;
+        font-weight: 300;
     }
 
     &_ident {
         margin:0;
+        &::placeholder {
+            font-weight: 400;
+        }
     }
 
     &_gray {
