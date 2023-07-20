@@ -87,22 +87,6 @@
         box-sizing: border-box;
         scroll-snap-align: center;
     }
-    &__button {
-        &_left {
-            position: absolute;
-            width: 30px;
-            height: 30px;
-            top: 50%;
-            left: 25px;
-        }
-        &_right {
-            position: absolute;
-            width: 30px;
-            height: 30px;
-            top: 50%;
-            right: 25px;
-        }
-    }
 }
 
 .product-info {
@@ -142,7 +126,10 @@
         color: $black;
     }
 }
-
+.swiper{
+    display: flex;
+    flex: 1 1 auto;
+}
 .swiper-pagination-bullet 
 {
     width: 10px;
@@ -173,5 +160,108 @@
     height: 40px;
     &::after{
         content:'';
+    }
+}
+@include media($tablet) {
+    .product {
+
+        &__container {
+        }
+        
+        &__slider {
+        }
+        &__content {
+
+        }
+        &__slide {
+
+        }
+        &__title {
+            font-size: 25px;
+        }
+        &__info {
+            gap: 10px;
+        }
+        &__variations {
+        }
+        &__price {
+            display: flex;
+            
+        }
+        &__price-final {
+
+        }
+        &__price-old {
+        }
+        &__link {
+
+        }
+        &__expiration {
+
+        }
+        
+    }
+}
+@include media($mobile) {
+    .product {
+        &__container {
+            flex-direction: column;
+            align-items: center;
+            text-align: center;
+        }
+        
+        &__slider {
+        }
+        &__content {
+            
+        }
+        &__slide {
+
+        }
+        &__title {
+            font-size: 20px;
+        }
+        &__info {
+            gap: 10px;
+        }
+        &__variations {
+            display: flex;
+            justify-content: center;
+            align-items: center;
+        }
+        &__price {
+            display: flex;
+            justify-content: center;
+            align-items: center;
+        }
+        &__price-final {
+
+        }
+        &__price-old {
+        }
+        &__link {
+            margin-left: auto;
+            margin-right: auto;
+        }
+        &__expiration {
+
+        }
+        
+    }
+    .swiper{
+        min-width: 100px;
+        width: 320px;
+    }
+    .product-info {
+        &__text {
+            font-size: 15px;
+        }
+        &__icon {
+            flex: 0 0 20px;
+            height: 20px;
+        }
+        &__block {
+            width: auto;
+        }
     }
 }
