@@ -150,6 +150,18 @@ function initBurgerButton() {
         }
     });
 }
+function initSliderButtons() {
+    const left = document.querySelector(".product-slider__button_left");
+    const right = document.querySelector(".product-slider__button_right");
+    const slider = document.querySelector(".product__slides");
+    const slides = document.querySelector(".product-slider__img");
+    left.addEventListener("click", e => {
+        slider.scrollRight += 300;
+    });
+    right.addEventListener("click", e => {
+        slider.scrollLeft += 300;
+    });
+}
 isWebp();
 
 document.addEventListener('DOMContentLoaded', (event) => {
