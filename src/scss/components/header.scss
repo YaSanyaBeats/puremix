@@ -100,7 +100,7 @@
     }
 }
 
-@include media($mobile) {
+@include media($tablet) {
     .header {
         &_active
         {
@@ -112,6 +112,7 @@
             .header__link
             {
                 color: white;
+                @include underline($white);
             }
         }
 
@@ -163,66 +164,6 @@
         }
     }
 }
-@include media($tablet) {
-    .header {
-        &_active
-        {
-            background-color: $purple;
-            .header__logo
-            {
-                filter: brightness(1000%);
-            }
-            .header__link
-            {
-                color: white;
-            }
-        }
-
-        &__container {
-            gap: 0px;
-            &_active
-            {
-                flex-direction: column;
-            }
-        }
-        &__burger-button {
-            display: flex;
-            &_active
-            {
-                margin-top: 30px;
-                flex-direction: row;
-                gap: 0;
-                transition: .3s;
-                .header-burger-button__line
-                {
-                    width: 6px;
-                }
-            }
-        }
-        &__logo {
-            flex: 0 10px 100px;
-        }
-        &__menu {
-           display: none;
-           margin-top:10px;
-           &_active
-           {
-                display: flex;
-           }
-        }
-        &__list {
-            display: flex;
-            flex-direction: column;
-            align-items: center;
-            gap: 20px;
-        }
-        &__icons {
-            width: 100px;
-            margin-left:15px;
-            &_active
-            {
-                 display: none;
-            }
-        }
-    }
+@include media($mobile) {
+ 
 }
