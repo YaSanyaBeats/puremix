@@ -13,6 +13,19 @@
         align-items: center;
         gap: 100px;
     }
+    &__burger-button {
+        display: flex;
+        flex-direction: column;
+        gap: 5px;
+        align-items: center;
+        justify-content: center;
+        border: none;
+        width: 40px;
+        height: 40px;
+        background-color: $white;
+        border-radius: 50%;
+        display: none;
+    }
     &__left {
         display: flex;
     }
@@ -28,6 +41,7 @@
     }
     &__menu {
         flex-grow: 1;
+        
     }
     &__list {
         display: flex;
@@ -77,44 +91,75 @@
     color: $white
 }
 
+.header-burger-button {
+
+    &__line {
+        background-color: $purple;
+        width: 18px;
+        height: 4px;
+    }
+}
+
 @include media($mobile) {
     .header {
-        background-color: black;
-        &__container {
-            flex-direction: column;
+        &_active
+        {
+            background-color: $purple;
+            .header__logo
+            {
+                filter: brightness(1000%);
+            }
+            .header__link
+            {
+                color: white;
+            }
         }
-        &__left {
+
+        &__container {
+            gap: 0px;
+            &_active
+            {
+                flex-direction: column;
+            }
+        }
+        &__burger-button {
+            display: flex;
+            &_active
+            {
+                margin-top: 30px;
+                flex-direction: row;
+                gap: 0;
+                transition: .3s;
+                .header-burger-button__line
+                {
+                    width: 6px;
+                }
+            }
         }
         &__logo {
-            &_white{
-            }
-            &_fill-white
-            {
-            }
+            flex: 0 10px 100px;
         }
         &__menu {
+           display: none;
+           margin-top:10px;
+           &_active
+           {
+                display: flex;
+           }
         }
         &__list {
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            gap: 20px;
         }
-        &__link {
-            &_white{
-            }
-            &_black{
-            }
-        }
-        &__right {}
         &__icons {
-        }
-        &__icon {
-            &:hover {
-            }
-            &_black{
-            }
-            &_fill{
+            width: 100px;
+            margin-left:15px;
+            &_active
+            {
+                 display: none;
             }
         }
-    }
-    .header_fill
-    {
     }
 }

@@ -127,7 +127,29 @@ function initTabs() {
         });
     }
 }
+function initBurgerButton() {
+    const button = document.querySelector('.header__burger-button');
+    button.addEventListener("click", e => {
+        e.preventDefault();
 
+        if (document.querySelector('.header__burger-button_active'))
+        {
+        document.querySelector('.header_active').classList.remove("header_active");
+        document.querySelector('.header__burger-button_active').classList.remove("header__burger-button_active");
+        document.querySelector(".header__menu_active").classList.remove("header__menu_active");
+        document.querySelector(".header__container_active").classList.remove("header__container_active");
+        document.querySelector(".header__icons_active").classList.remove("header__icons_active");
+        }
+        else
+        {
+        document.querySelector('.header').classList.add("header_active");
+        button.classList.add("header__burger-button_active");
+        document.querySelector('.header__menu').classList.add("header__menu_active");
+        document.querySelector('.header__container').classList.add("header__container_active");
+        document.querySelector('.header__icons').classList.add("header__icons_active");
+        }
+    });
+}
 isWebp();
 
 document.addEventListener('DOMContentLoaded', (event) => {
@@ -135,4 +157,5 @@ document.addEventListener('DOMContentLoaded', (event) => {
     initEquipmentAccordion();
     initVariationsCalc();
     initTabs();
+    initBurgerButton();
 })
