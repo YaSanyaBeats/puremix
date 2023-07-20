@@ -68,6 +68,7 @@
     &__right {}
     &__icons {
         display: flex;
+        justify-content: flex-end;
         gap: 15px;
     }
     &__icon {
@@ -157,6 +158,7 @@
         &__icons {
             width: 100px;
             margin-left:15px;
+
             &_active
             {
                  display: none;

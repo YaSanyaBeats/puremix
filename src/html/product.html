@@ -1,25 +1,23 @@
 <section class="product">
     <div class="product__container container">
-        <div class="product__slider">
-            <div class="product__slides">
-                <img class="product-slider__img" src="images/product.png">
-                <img class="product-slider__img" src="images/product.png">
-                <img class="product-slider__img" src="images/product.png">
+        <div class="product__slider swiper">
+            <div class="product__slides swiper-wrapper">
+                <div class="swiper-slide product__slide">
+                    <img class="product-slider__img" src="images/product.png">
+                </div>
+                <div class="swiper-slide product__slide">
+                    <img class="product-slider__img" src="images/product.png">
+                </div>
+                <div class="swiper-slide product__slide">
+                    <img class="product-slider__img" src="images/product.png">
+                </div>
             </div>
-            <a class="product-slider__button_left">
-                @@include('../images/vector/left.svg')
-            </a>
-            <a class="product-slider__button_right">
-                @@include('../images/vector/right.svg')
-            </a>
-            <div class="product__pagination">
-                <span class="product-pagination__element product-pagination__element-active">
-                </span>
-                <span class="product-pagination__element">
-                </span>
-                <span class="product-pagination__element">
-                </span>
-            </div>
+            <!-- If we need pagination -->
+            <div class="swiper-pagination product__pagination"></div>
+
+            <!-- If we need navigation buttons -->
+            <div class="swiper-button-prev product__button product__button_prev"></div>
+            <div class="swiper-button-next product__button product__button_next"></div>
         </div>
         
         <div class="product__content">

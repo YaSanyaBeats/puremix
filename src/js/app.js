@@ -162,6 +162,27 @@ function initSliderButtons() {
         slider.scrollLeft += 300;
     });
 }
+
+function initProductSwiper() {
+    const productSwiper = document.querySelector('.product__slider');
+    if(productSwiper) {
+        const swiper = new Swiper('.product__slider', {
+          
+            // If we need pagination
+            pagination: {
+              el: '.product__pagination',
+              clickable: true
+            },
+          
+            // Navigation arrows
+            navigation: {
+              nextEl: '.product__slider .product__button_next',
+              prevEl: '.product__slider .product__button_prev',
+            },
+        });
+    }
+}
+
 isWebp();
 
 document.addEventListener('DOMContentLoaded', (event) => {
@@ -170,4 +191,5 @@ document.addEventListener('DOMContentLoaded', (event) => {
     initVariationsCalc();
     initTabs();
     initBurgerButton();
+    initProductSwiper();
 })
