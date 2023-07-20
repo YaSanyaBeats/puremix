@@ -4,8 +4,8 @@
         display: flex;
         gap: 50px;
     }
+    
     &__slider {
-        box-shadow: inset 0 0 90px 100px rgba(0, 0, 0, 0.3);
         position: relative;
         flex: 0 0 750px;
     }
@@ -68,13 +68,11 @@
         width: 225px;
     }
     &__expiration {
+        margin-top: 50px;
         color: rgba(0, 0, 0, 0.50);
         font-size: 20px;
         font-weight: 300;
         display: flex;
-        position: absolute;
-        bottom: 0;
-        left: 0;
     }
 }
 .product-slider {
@@ -106,23 +104,7 @@
         }
     }
 }
-.product-pagination {
-    &__element {
-        width: 10px;
-        height: 10px;
-        display: inline-block;
-        border-radius: 50%;
-        border: 1px solid;
-        border-color: $white;
-    }
-    &__element-active {
-        width: 10px;
-        height: 10px;
-        display: inline-block;
-        border-radius: 50%;
-        background: $white;
-    }
-}
+
 .product-info {
     &__block {
         width: 100px;
@@ -161,3 +143,35 @@
     }
 }
 
+.swiper-pagination-bullet 
+{
+    width: 10px;
+    height: 10px;
+    display: inline-block;
+    border-radius: 50%;
+    border: 1px solid;
+    border-color: $white;
+}
+.swiper-pagination-bullet-active{
+    width: 10px;
+    height: 10px;
+    display: inline-block;
+    border-radius: 50%;
+    background: $white;
+}
+.swiper-button-next
+{
+    width: 40px;
+    height: 40px;
+    &::after{
+    content:'';
+    }
+}
+.swiper-button-prev
+{
+    width: 40px;
+    height: 40px;
+    &::after{
+        content:'';
+    }
+}
