@@ -110,4 +110,14 @@
     }
 }
 
+@include media($mobile) {
+    .accordion {
+        &__title {
+            font-size: 25px;
+        }
 
+    }
+}
+@include media($tablet) {
+
+}

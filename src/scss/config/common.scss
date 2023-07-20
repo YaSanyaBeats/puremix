@@ -181,3 +181,17 @@ a {
         }
     }
 }
+@include media($mobile) {
+    .section-title {
+        font-size: 30px;
+        display: flex;
+        flex-direction: column;
+        text-align: center;
+        &_accent {
+            margin-top: 10px;
+        }
+    }
+}
+@include media($tablet) {
+
+}

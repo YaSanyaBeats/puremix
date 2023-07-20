@@ -84,3 +84,58 @@
     }
 }
 
+@include media($mobile) {
+    .feedback {
+
+        &__container {
+            display: flex;
+            align-items: center;
+            flex-direction: column;
+            text-align: center;
+        }
+        &__content {
+            width: min-content;
+        }
+        &__title {
+            font-size: 25px;
+            &_accent {
+                font-size: 25px;
+            }
+        }
+        &__paragraph {
+            display: flex;
+            font-size: 15px;
+        }
+        &__form {
+            display: flex;
+            align-items: center;
+            flex-direction: column;
+            text-align: center;
+        }
+        &__input {
+            width: 300px;
+            &::placeholder {
+
+            }
+        }
+        &__link {
+            display: flex;
+            margin-left: auto;
+            margin-right: auto;
+            width: 200px;
+        }
+        &__block {
+        }
+        &__image {
+
+        }
+    }
+}
+@include media(1395) {
+    .feedback {
+
+        &__block {
+            display: none;
+        }
+    }
+}
