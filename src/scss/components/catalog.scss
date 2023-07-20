@@ -77,13 +77,8 @@
         &__container {
         }
         &__cards {
-            overflow-x: scroll;
-            overflow-y: hidden;
-            white-space: nowrap;
         }
         &__card {
-            display: inline-block;
-            
         }
     }
     
@@ -94,7 +89,6 @@
             }
         
         &__img {
-            height: 300px;
         }
         &__tag {
         }
@@ -116,6 +110,9 @@
             overflow-x: scroll;
             overflow-y: hidden;
             white-space: nowrap;
+            display: flex;
+            grid-template-columns: none;
+            padding-bottom: 20px;
         }
         &__card {
             display: inline-block;
