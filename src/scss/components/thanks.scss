@@ -1,0 +1,16 @@
+.thanks {
+    margin-top: 160px;
+    &__container {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+    }
+    &__title {
+        margin:0;
+        text-transform: none;
+        color: #097400;
+        font-size: 65px;
+        font-weight: 500;
+    }
+}
+
