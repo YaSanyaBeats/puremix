@@ -20,10 +20,9 @@
         align-items: center;
         justify-content: center;
         border: none;
-        width: 40px;
-        height: 40px;
-        background-color: $white;
-        border-radius: 50%;
+        width: 50px;
+        height: 50px;
+        background-color: $black;
         display: none;
     }
     &__left {
@@ -95,14 +94,17 @@
 .header-burger-button {
 
     &__line {
-        background-color: $purple;
-        width: 18px;
-        height: 4px;
+        background-color: $white;
+        width: 25px;
+        height: 2px;
     }
 }
 
 @include media($tablet) {
     .header {
+        &_fill{
+            background:none;
+        }
         &_active
         {
             background-color: $purple;
@@ -115,20 +117,30 @@
                 color: white;
                 @include underline($white);
             }
+            .header__icon
+            {
+                filter: brightness(1000%);
+            }
+            .header__logo {
+                display: flex;
+            }
         }
 
         &__container {
-            gap: 0px;
+            justify-content: flex-end;
             &_active
             {
+                gap: 50px;
                 flex-direction: column;
             }
         }
         &__burger-button {
+            margin-top: 60px;
+            margin-right: 10px;
             display: flex;
             &_active
             {
-                margin-top: 30px;
+                margin-top: 0px;
                 flex-direction: row;
                 gap: 0;
                 transition: .3s;
@@ -139,6 +151,7 @@
             }
         }
         &__logo {
+            display: none;
             flex: 0 0 100px;
         }
         &__menu {
@@ -156,12 +169,12 @@
             gap: 20px;
         }
         &__icons {
-            width: 100px;
-            margin-left:15px;
-
+            display: none;
+            align-items: center;
+            justify-content: center;
             &_active
             {
-                 display: none;
+                 display: flex;
             }
         }
     }

@@ -112,10 +112,40 @@
 
 @include media($mobile) {
     .accordion {
+        &__elem{
+            padding: 10px 0;
+        }
         &__title {
-            font-size: 25px;
+            font-size: 18px;
+        }
+        &__text {
+            font-size: 15px;
         }
 
+    }
+    .accordion-button {
+        flex: 0 0 30px;
+        height: 30px;
+        &_gradient {
+            &::before
+            {
+            }
+            &::after
+            {
+            }
+        }
+        &::before
+        {
+            width: 20px;
+            height: 1px;
+        }
+        &::after
+        {
+
+            width: 20px;
+            height: 1px;
+
+        }
     }
 }
 @include media($tablet) {
