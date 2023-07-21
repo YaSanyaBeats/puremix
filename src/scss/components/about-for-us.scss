@@ -44,3 +44,63 @@
         font-weight: 300;
     }
 }
+@include media($tablet) {
+    .about-for-us {
+        &__container {
+
+        }
+        &__title {
+
+        }
+        &__content {
+            gap: 10px;
+        }
+        &__block {
+
+        }
+    }
+    .about-for-us-block {
+        &__title {
+        }
+        &__text {
+            font-size: 15px;
+        }
+    }
+    .about-for-us-block-title {
+        &__image {
+            width: 20px;
+            height: 20px;
+        }
+        &__text {
+            font-size: 25px;
+        }
+    }
+}
+@include media($mobile) {
+    .about-for-us {
+        &__container {
+
+        }
+        &__title {
+
+        }
+        &__content {
+            flex-direction: column;
+        }
+        &__block {
+            width: auto;
+        }
+    }
+    .about-for-us-block {
+        &__title {
+        }
+        &__text {
+        }
+    }
+    .about-for-us-block-title {
+        &__image {
+        }
+        &__text {
+        }
+    }
+}

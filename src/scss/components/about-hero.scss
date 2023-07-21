@@ -37,6 +37,51 @@
     &__logo {
         position: absolute;
         top: 20px;
+        
     }
 }
-
+@include media($tablet) {
+    .about-hero {
+        &__container {
+        }
+        &__block {
+        }
+        &__title {
+        }
+        &__text {
+        }
+    }
+    .about-hero-block {
+        &__image {
+        }
+        &__logo {
+        }
+    }
+}
+@include media($mobile) {
+    .about-hero {
+        &__container {
+        }
+        &__block {
+            display: flex;
+        }
+        &__title {
+            font-size: 25px;
+        }
+        &__text {
+            font-size: 20px;
+        }
+    }
+    .about-hero-block {
+        &__image {
+            display: flex;
+            object-fit: cover;
+            width: 40%;
+            
+        }
+        &__logo {
+            width: 60%;
+            top: 60px;
+        }
+    }
+}

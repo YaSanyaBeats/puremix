@@ -41,3 +41,53 @@
         margin-top: 50px;
     }
 }
+@include media($tablet) {
+    .about-article {
+        &__container {
+        }
+        &__image-block {
+        }
+        &__content-block {
+        }
+    }
+    .about-article-image-block {
+        &__image {
+        }
+    }
+    .about-article-content-block {
+        &__title {
+            font-size: 25px;
+        }
+        &__text-first {
+            font-size: 25px;
+            margin-top: 40px
+        }
+        &__text-second {
+            font-size: 15px;
+        }
+    }
+}
+@include media($mobile) {
+    .about-article {
+        &__container {
+            flex-direction: column;
+            align-items: center;
+        }
+        &__image-block {
+            display: flex;
+            width: auto;
+            height: auto;
+        }
+        &__content-block {
+        }
+    }
+    .about-article-content-block {
+        &__title {
+            margin-top: 40px
+        }
+        &__text-first {
+        }
+        &__text-second {
+        }
+    }
+}
