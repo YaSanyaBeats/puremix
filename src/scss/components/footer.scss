@@ -1,25 +1,54 @@
 .footer {
-
+    margin-top: 100px;
+    border-top: 2px solid $black;
+    height: 340px;
     &__container {
+        margin-top: 50px;
+        display: flex;
     }
     &__logo {
+        display: flex;
         filter: brightness(0%);
+        width: 155px;
+        height: 70px;
     }
     &__menu {
+        margin-left: 215px;
+        display: flex;
+        flex-direction: column;
     }
     &__info {
+        margin-left: 305px;
+        display: flex;
+        flex-direction: column;
+    }
+    &__title {
+        color: $black;
+        font-size: 25px;
+        font-weight: 500;
     }
 }
 .footer-menu {
 
-    &__title {
-    }
     &__list {
-    }
-    &__elem {
+        margin-top: 25px;
+        list-style-type: none;
+        display: flex;
+        flex-direction: column;
+        padding: 0;
+        gap: 5px;
     }
     &__link {
+        color: $black;
+        font-size: 25px;
+        font-weight: 300;
+        text-decoration: none;
     }
     &__text {
+        margin-top: 25px;
+        color: $black;
+        font-size: 25px;
+        font-weight: 300;
+        line-height: 1.5; 
     }
 }
