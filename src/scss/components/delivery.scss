@@ -27,3 +27,49 @@
         font-weight: 300;
     }
 }
+@include media($tablet) {
+    .delivery {
+
+        &__container {
+
+        }
+        &__title {
+
+        }
+        &__block {
+
+        }
+    }
+    .delivery-block {
+    
+        &__title {
+            
+        }
+        &__text {
+
+        }
+    }
+}
+@include media($mobile) {
+    .delivery {
+
+        &__container {
+
+        }
+        &__title {
+
+        }
+        &__block {
+
+        }
+    }
+    .delivery-block {
+    
+        &__title {
+            font-size: 25px;
+        }
+        &__text {
+            font-size: 20px;
+        }
+    }
+}

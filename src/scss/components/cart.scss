@@ -32,6 +32,7 @@
 
     &__product {
         margin-left: 165px;
+        margin-left:auto;
         display: flex;
         flex-direction: column;
         justify-content: center;
@@ -114,7 +115,7 @@
 .cart-result-delivery {
 
     &__text {
-        margin-left: 50px
+        margin-left: 50px;
     }
 }
 .cart-result-price {
@@ -123,6 +124,177 @@
         margin-left: 77px
     }
 }
+@include media($tablet) {
+    .cart {
+        &__container {
+        }
+        &__product-block {
+            gap: 40px;
+            align-items: center;
+            justify-content: center;
+        }
+        &__link {
+        }
+        &__result {
+            margin-left: 0;
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            justify-content: center;
+        }
+    }
+    .cart-product-block {
+    
+        &__cancell {
+        }
+        &__product {
+            margin-left: 0;
+        }
+        &__title {
+        }
+        &__content {
+        }
+        &__image {
+        }
+        &__price {
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+        }
+        &__calc {
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+        }
+        &__subtotal {
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+        }
+    }
+    .cart-product-block-content {
+    
+        &__img-wrapper {
+        }
+        &__text {
+        }
+        &__title{
+        }
+    
+    }
+    
+    
+    .cart-result {
+    
+        &__title {
+        }
+    
+        &__block {
+            &_text {
+            }
+        }
+    
+        &__link {
+        }
+    }
+    .cart-result-block {
+        &__title {
+        }
+    }
+    .cart-result-delivery {
+        &__text {
+        }
+    }
+    .cart-result-price {
+        &__text {
+        }
+    }
+}
+@include media($mobile) {
+    .cart {
+        &__container {
+        }
+        &__product-block {
+            border: 1px solid $black;
+            gap: 20px;
+            flex-direction: column;
+            padding: 40px;
+        }
+        &__link {
+            font-size: 25px;
+        }
+        &__result {
 
+        }
+    }
+    .cart-product-block {
+    
+        &__cancell {
+            margin:0;
+        }
+        &__product {
+            margin-left: 0;
+        }
+        &__title {
+        }
+        &__content {
+            margin-top: 10px;
+            height: auto;
+            width: auto;
+            flex-direction: column;
+        }
+        &__image {
+        }
+        &__price {
+        }
+        &__calc {
+        }
+        &__subtotal {
+        }
+    }
+    .cart-product-block-content {
+    
+        &__img-wrapper {
+            display: flex;
+            height: 300px;
+            width: 200px;
+            
+        }
+        &__text {
+        }
+        &__title{
+            margin: 0;
+            margin-top: 10px;
+        }
+    
+    }
+    
+    
+    .cart-result {
+    
+        &__title {
+        }
+    
+        &__block {
+            &_text {
+            }
+        }
+    
+        &__link {
+        }
+    }
+    .cart-result-block {
+        &__title {
+        }
+    }
+    .cart-result-delivery {
+        &__text {
+        }
+    }
+    .cart-result-price {
+        &__text {
+        }
+    }
+}
 
 
