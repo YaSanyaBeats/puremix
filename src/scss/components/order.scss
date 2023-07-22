@@ -1,6 +1,8 @@
 .order {
     margin-top: 160px;
     &__container {
+        display: flex;
+        flex-direction: column;
     }
     &__block {
         margin-top:50px;
@@ -16,7 +18,9 @@
     }
 
     &__form {
+
         margin-left: 220px;
+        width: 100%;
         color: $black;
         display: flex;
         flex-direction: column;
@@ -106,6 +110,7 @@
     }
     &__input {
         margin-top: 30px;
+        width: auto;
         &_size {
             display: flex;
             height: 185px;
@@ -129,5 +134,134 @@
 .order-form-list{
     &__element {
         margin-top:30px;
+    }
+}
+@include media($tablet) {
+    .order {
+
+        &__container {
+
+        }
+        &__block {
+            flex-direction: column;
+
+        }
+        &__title {
+
+        }
+    
+        &__content {
+
+        }
+    
+        &__form {
+            margin:0;
+            margin-top: 50px;
+        }
+    }
+    
+}
+@include media($mobile) {
+    .order {
+
+        &__container {
+
+        }
+        &__block {
+            flex-direction: column;
+
+        }
+        &__title {
+
+        }
+    
+        &__content {
+            align-items: center;
+        }
+    
+        &__form {
+        }
+    }
+    
+    .order-content {
+    
+        &__title {
+
+        }
+    
+        &__product {
+            flex-direction: column;
+        }
+    }
+    .order-block {
+    
+        &__title {
+        }
+    }
+    .order-content-product {
+    
+        &__img-wrapper {
+
+            &:hover {
+
+                .order-content-product__image {
+
+                }
+            }
+        }
+    
+        &__image {
+
+        }
+    
+        &__title-product {
+            margin: 0;
+            margin-top: 10px;
+            text-align: center;
+        }
+    
+        &__price {
+            margin: 0;
+            margin-top: 20px;
+        }
+    
+        &__price-result {
+
+        }
+    
+        &__price-multiply {
+
+        }
+    }
+    .order-form {
+    
+        &__title {
+            font-size: 30px;
+            &_main {
+
+            }
+        }
+        &__input {
+            font-size: 20px;
+            height: 60px;
+            &::placeholder
+            {
+                font-size: 20px;
+            }
+            &_size {
+
+            }
+        }
+        &__list {
+            font-size: 20px;
+        }
+        &__link {
+width: auto;
+        }
+    }
+    .order-form-list{
+        &__element {
+
+        }
     }
 }

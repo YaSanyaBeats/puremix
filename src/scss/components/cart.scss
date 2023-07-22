@@ -223,7 +223,8 @@
         &__container {
         }
         &__product-block {
-            border: 1px solid $black;
+            border-top: 1px solid $black;
+            border-bottom: 1px solid $black;
             gap: 20px;
             flex-direction: column;
             padding: 40px;
