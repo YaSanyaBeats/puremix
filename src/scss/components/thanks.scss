@@ -13,4 +13,19 @@
         font-weight: 500;
     }
 }
+@include media($mobile) {
+    .thanks {
 
+        &__container {
+
+        }
+        &__title {
+font-size: 40px;
+        }
+        &__link
+        {
+            margin-top: 40px;
+            width: auto;
+        }
+    }
+}
