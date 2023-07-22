@@ -104,6 +104,7 @@
     .header {
         &_fill{
             background:none;
+            pointer-events: none;
         }
         &_active
         {
@@ -138,6 +139,7 @@
             margin-top: 60px;
             margin-right: 10px;
             display: flex;
+            pointer-events:all;
             &_active
             {
                 margin-top: 0px;
@@ -153,10 +155,12 @@
         &__logo {
             display: none;
             flex: 0 0 100px;
+            pointer-events:all;
         }
         &__menu {
            display: none;
            margin-top:10px;
+           pointer-events:all;
            &_active
            {
                 display: flex;
@@ -172,6 +176,7 @@
             display: none;
             align-items: center;
             justify-content: center;
+            pointer-events:all;
             &_active
             {
                  display: flex;
