@@ -192,6 +192,10 @@
         }
     
         &__block {
+            margin-top: 25px;
+            display: flex;
+            flex-direction: column;
+            align-items: center;
             &_text {
             }
         }
@@ -205,10 +209,12 @@
     }
     .cart-result-delivery {
         &__text {
+            margin: 0;
         }
     }
     .cart-result-price {
         &__text {
+            margin: 0;
         }
     }
 }
@@ -278,7 +284,6 @@
         }
     
         &__block {
-            
             &_text {
             }
         }
@@ -292,12 +297,10 @@
     }
     .cart-result-delivery {
         &__text {
-            margin:0;
         }
     }
     .cart-result-price {
         &__text {
-            margin: 0;
         }
     }
 }
